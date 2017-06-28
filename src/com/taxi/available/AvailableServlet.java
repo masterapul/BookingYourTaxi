@@ -50,7 +50,6 @@ public class AvailableServlet extends HttpServlet  {
 		
 			
 		
-			pw.println("<center style=color:black>Hi, There 1 Taxis are available for You");
 		
 			pw.println("</body>");
 			
