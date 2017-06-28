@@ -9,6 +9,15 @@
   <servlet-name>booking</servlet-name>
   <url-pattern>/go</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>booking1</servlet-name>
+  <servlet-class>com.taxi.available.BookingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>booking1</servlet-name>
+  <url-pattern>/reserve</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     

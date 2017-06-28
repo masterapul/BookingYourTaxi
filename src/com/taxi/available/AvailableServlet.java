@@ -34,33 +34,35 @@ public class AvailableServlet extends HttpServlet  {
 		}
 		pw.println("<center><u><h1>BOOK YOUR TAXI</h1></u></center>");
 		pw.println("<br>");
-		pw.println("<input type='radio' value='taxi1' name='t'>TAXI1</input>");
-		pw.println("<input type='radio' value='taxi2' name='t'>TAXI2</input>");
-		pw.println("<input type='radio' value='taxi3' name='t'>TAXI3</input>");
+		pw.println("<form action='reserve' method='post'>");
+		pw.println("<table align='center'>");
+		pw.println("<tr><td><h1>Hi You Can Reserve your taxi for "+result+" hour</h1></td></tr>");
+		//sending result(total booking time to next page)
+		pw.println("<input type='hidden' name='hname' value="+s+">");
 		
-	
+		pw.println("<tr><td><input type='radio' value='taxi1' name='t'>TAXI1</input></td>");
+		pw.println("<td><input type='radio' value='taxi2' name='t'>TAXI2</input></td>");
+		pw.println("<td><input type='radio' value='taxi3' name='t'>TAXI3</input></td></tr>");
+		pw.println("<tr><td><input type='submit' value='BOOK YOUR TAXI'>");
+		pw.println("</table>");
+		pw.println("</form>");
 		pw.println("<br>");
-		int wanted=1;
-		try {
-			Thread.sleep(2000);
-
-			pw.println("Hi You Reserve your taxi for "+result+" hour");
+		
+			
 		
 			pw.println("<center style=color:black>Hi, There 1 Taxis are available for You");
-			int available1=available-wanted;
-			pw.println("Now total available of taxi is"+available1);
+		
+			pw.println("</body>");
 			
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
 		}
 		
 		
 		
-		pw.println("</body>");
 		
 		
-	}
+		
+	
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
